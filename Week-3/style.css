@@ -1,107 +1,150 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header{
-    background-color: black;
-    color: #fff;
-    height: 50px;
-    
+header {
+  background-color: black;
+  color: #fff;
+  height: 50px;
 }
-.navbar{
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 16rem;
+}
+.navbar a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar a:hover {
+  color: rgb(78, 108, 98);
+}
+.home {
+  position: relative;
+  height: 38rem;
+  overflow: hidden;
+}
+.home::before {
+  content: "";
+  background: url(images/photo1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(2px);
+  opacity: 2;
+}
+
+.home h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 95px;
+  font-size: 120px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+}
+.home .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  gap: 70rem;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+.home .bottom p {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.about h1 {
+  font-size: 35px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  text-align: center;
+  align-items: center;
+}
+.detail {
+  max-width: 850px;
+  padding: 20px;
+  margin-left: 22rem;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.249);
+  text-align: justify;
+}
+.detail img {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+.detail p {
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 8px;
+}
+.detail div {
+  text-align: left;
+  background: rgba(172, 172, 208, 0.455);
+  background-size: contain;
+  height: 100px;
+  width: 50rem;
+  padding: 30px;
+  border-left: 8px solid gray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+@media screen and (max-width: 800px) {
+  .navbar {
     display: flex;
     justify-content: center;
-    gap: 16rem;
-}
-.navbar a{
+    gap: 3rem;
+  }
+  .navbar a {
     color: #fff;
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
     margin-top: 15px;
     text-decoration: none;
     text-transform: uppercase;
-}
-.navbar a:hover{
-    color: rgb(78, 108, 98);
-}
-.home {
-    position: relative;
-    height: 38rem;
-    overflow: hidden;
-}
-.home::before {
-    content: "";
-    background: url(images/photo1.jpg);
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    filter: blur(2px); 
-    opacity: 2; 
-}
-
-.home h1{
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    position: relative;
-    padding-top: 95px;
-    font-size: 120px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
-    color: #fff;
-}
-.home .bottom{
-    display: flex;
-    justify-content:space-between;
-    padding-left: 20px;
-    gap: 70rem;
-    position:absolute;
-    bottom: 0;
-    margin-bottom: 20px;
-}
-.home .bottom p{
-    font-size:  20px;
-    color: #fff;
-    font-weight: bold;
-}
-.about h1{
-    font-size: 35px;
-    padding-top: 40px;
-    padding-bottom: 35px;
-    text-align: center;
-    align-items: center;
-}
-.detail {
-    max-width: 850px;
-    padding: 20px;
-    margin-left: 22rem;
+  }
+  .home h1 {
+    font-size: 80px;
+  }
+  .home {
+    height: 28rem;
+  }
+  .home .bottom {
+    gap: 5rem;
+  }
+  .home .bottom p {
+    font-size: 14px;
+  }
+  .about h1 {
+    font-size: 20px;
+  }
+  .detail {
+    width: 80%;
+    margin-left: 20px;
     background: #fff;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.249);
     text-align: justify;
-}
-.detail img {
+  }
+  .detail div {
     width: 100%;
-    display: block;
-    margin: 20px 0;
-}
-.detail p {
-    margin: 10px 0;
-    font-size: 20px;
-    padding: 8px;
-}
-.detail div {
-    text-align: left;
-    background: rgba(172, 172, 208, 0.455);
-    background-size:contain;
-    height: 100px;
-    width: 50rem;
-    padding: 30px; 
-    border-left:8px solid gray;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 8px;
+    padding: 2px;
+  }
 }
